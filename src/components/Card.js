@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CurrentDate from "./CurrentDate";
 import UserTemp from "./UserTemp";
-import UserTempMaxMin from "./UserTempMaxMin";
+/* import UserTempMaxMin from "./UserTempMaxMin"; */
 import Forecast from "./Forecast";
 import useGetData from "../Hooks/useGetData";
 import useBackImage from "../Hooks/useBackImage";
@@ -19,8 +19,6 @@ const Card = () => {
     currentData.weather?.[0].description.slice(1);
 
   console.log(weatherDescription);
-
-  const { imageUrl } = useBackImage();
 
   return (
     <div className="Card">
