@@ -26,11 +26,9 @@ const useBackImage = (searchWords) => {
   const [imageUrl, setImageUrl] = useState();
 
   useEffect(() => {
-    console.log("back image useEffect", { searchWords });
     if (!searchWords) return;
     getPhoto().then((photoUrl) => {
       setImageUrl(photoUrl);
-      console.log("after getPhoto", { imageUrl });
     });
   }, [searchWords]);
 
