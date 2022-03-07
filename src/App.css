@@ -1,38 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 .App {
   text-align: center;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Card {
+  font-family: "Roboto", sans-serif;
+  height: 650px;
+  width: 400px;
+  background-color: rgba(218, 216, 216, 0.397);
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.City {
+  margin-bottom: 0px;
+  font-weight: 900;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CurrentDate {
+  margin: 0;
+}
+
+.UserTemp {
+  margin: 20px 20px 0px;
+
+  font-family: fantasy;
+  font-size: 120px;
+}
+.WeatherIcon {
+  position: relative;
+  bottom: 20px;
+}
+.WeatherIcon img {
+  height: 120px;
+}
+.WeatherDescription {
+  margin: 0px;
+  position: relative;
+  bottom: 20px;
+}
+
+.Forecast {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  bottom: 50px;
+}
+.Forecast img {
+  height: 60px;
+}
+
+.ForecastDay {
+  margin: 0px;
+}
+
+.ToggleTemp {
+  width: 60px;
+  height: 35px;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 30px 30px 0px 0px;
+  border-style: none;
 }

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./components/Card";
+import useGetData from "./Hooks/useGetData";
+import useBackImage from "./Hooks/useBackImage";
 
 function App() {
+  const { currentData } = useGetData();
+
+  const weaDesc = currentData.weather?.[0].description;
+
+  console.log(weaDesc);
+
+  const { imageUrl } = useBackImage(weaDesc);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Custom properties
+    <div className="App" style={{ backgroundImage: `url(${imageUrl})` }}>
+      <Card />
     </div>
   );
 }
